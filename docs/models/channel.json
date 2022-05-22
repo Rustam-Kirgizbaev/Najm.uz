@@ -1,0 +1,25 @@
+{
+    "ChannelCreate": {
+        "type": "object",
+        "properties": {
+            "name": {
+                "type": "string",
+                "required": true
+            },
+            "telegram_id": {
+                "type": "string",
+                "required": true
+            },
+            "regions": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "is_official": {
+                "type": "boolean",
+                "default": false
+            }
+        }
+    }
+}

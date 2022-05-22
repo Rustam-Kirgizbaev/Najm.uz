@@ -1,0 +1,117 @@
+   
+{
+    "/api/channel/": {
+        "get": {
+            "description": "Get all Channels",
+            "tags": ["Channel"],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        },
+        "post": {
+            "description": "Create Channel",
+            "tags": ["Channel"],
+            "parameters": [
+                {
+                    "in": "body",
+                    "name": "Body",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/ChannelCreate"
+                    }
+                }
+            ],
+            "responses": {
+                "201": {
+                    "description": "OK"
+                }
+            }
+        }
+    },
+    "/api/channel/{id}": {
+        "get": {
+            "description": "Get Channel by ID (telegram/mongo)",
+            "tags": ["Channel"],
+            "parameters": [
+                {
+                    "in": "path",
+                    "name": "id",
+                    "description": "Channel ID",
+                    "required": true,
+                    "type": "string"
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        },
+        "patch": {
+            "description": "Update Channel",
+            "tags": ["Channel"],
+            "parameters": [
+                {
+                    "in": "path",
+                    "name": "id",
+                    "description": "Channel ID",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "in": "body",
+                    "name": "Body",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/ChannelCreate"
+                    }
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        },
+        "delete": {
+            "description": "Delete Channel",
+            "tags": ["Channel"],
+            "parameters": [
+                {
+                    "in": "path",
+                    "name": "id",
+                    "description": "Channel ID",
+                    "required": true,
+                    "type": "string"
+                }
+            ],
+            "responses": {
+                "204": {
+                    "description": "OK"
+                }
+            }
+        }
+    },
+    "/api/channel/{id}/delete": {
+        "patch": {
+            "description": "Delete Channel (not a delete but archive)",
+            "tags": ["Channel"],
+            "parameters": [
+                {
+                    "in": "path",
+                    "name": "id",
+                    "description": "Channel ID",
+                    "required": true,
+                    "type": "string"
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        }
+    }
+}

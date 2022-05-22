@@ -1,0 +1,97 @@
+   
+{
+    "/api/post/": {
+        "get": {
+            "description": "Get all Posts",
+            "tags": ["Post"],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        },
+        "post": {
+            "description": "Create Post",
+            "tags": ["Post"],
+            "parameters": [
+                {
+                    "in": "body",
+                    "name": "Body",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/PostCreate"
+                    }
+                }
+            ],
+            "responses": {
+                "201": {
+                    "description": "OK"
+                }
+            }
+        }
+    },
+    "/api/post/{id}": {
+        "get": {
+            "description": "Get Post by ID",
+            "tags": ["Post"],
+            "parameters": [
+                {
+                    "in": "path",
+                    "name": "id",
+                    "description": "Post ID",
+                    "required": true,
+                    "type": "string"
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        },
+        "patch": {
+            "description": "Update Post",
+            "tags": ["Post"],
+            "parameters": [
+                {
+                    "in": "path",
+                    "name": "id",
+                    "description": "Post ID",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "in": "body",
+                    "name": "Body",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/PostCreate"
+                    }
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        },
+        "delete": {
+            "description": "Delete Post",
+            "tags": ["Post"],
+            "parameters": [
+                {
+                    "in": "path",
+                    "name": "id",
+                    "description": "Post ID",
+                    "required": true,
+                    "type": "string"
+                }
+            ],
+            "responses": {
+                "204": {
+                    "description": "OK"
+                }
+            }
+        }
+    }
+}

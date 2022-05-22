@@ -1,0 +1,11 @@
+   
+[
+    {
+        "name": "Channel",
+        "description": "Channel endpoints."
+    },
+    {
+        "name": "Post",
+        "description": "Post endpoints."
+    }
+]

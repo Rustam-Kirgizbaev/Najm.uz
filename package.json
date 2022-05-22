@@ -1,0 +1,33 @@
+{
+  "name": "najm.uz",
+  "version": "1.0.0",
+  "description": "telegram and instagram bot for Najm.uz",
+  "main": "bot.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rustam-Kirgizbaev/Najm.uz.git"
+  },
+  "author": "Rustamjon Kirgizbaev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rustam-Kirgizbaev/Najm.uz/issues"
+  },
+  "homepage": "https://github.com/Rustam-Kirgizbaev/Najm.uz#readme",
+  "dependencies": {
+    "canvas": "^2.9.1",
+    "cheerio": "^1.0.0-rc.10",
+    "cheerio-tableparser": "^1.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.3",
+    "node-cron": "^3.0.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
+    "swagger-ui-express": "^4.4.0",
+    "telegraf": "^4.7.0"
+  }
+}

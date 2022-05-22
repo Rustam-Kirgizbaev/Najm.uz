@@ -1,0 +1,23 @@
+{
+    "PostCreate": {
+        "type": "object",
+        "properties": {
+            "type": {
+                "type": "string",
+                "enum": ["text", "photo", "video", "document", "audio"]
+            },
+            "file_id": {
+                "type": "string"
+            },
+            "caption": {
+                "type": "string"
+            },
+            "schedule_date": {
+                "type": "number"
+            },
+            "extra": {
+                "type": "object"
+            }
+        }
+    }
+}
